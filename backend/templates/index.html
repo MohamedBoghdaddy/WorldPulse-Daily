@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WorldPulse Daily Dashboard</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>WorldPulse Daily</h1>
+
+      <div class="card">
+        <h2>Create Job</h2>
+
+        <label>Backend Token</label>
+        <input id="token" placeholder="Paste BACKEND_API_TOKEN" />
+
+        <label>Topic</label>
+        <input id="topic" placeholder="Why your brain loves procrastination" />
+
+        <label>Keywords (comma separated)</label>
+        <input
+          id="keywords"
+          placeholder="procrastination, psychology, habits"
+        />
+
+        <div class="row">
+          <div>
+            <label>Duration</label>
+            <input id="duration" type="number" value="60" />
+          </div>
+          <div>
+            <label>Lang</label>
+            <input id="lang" value="en" />
+          </div>
+          <div>
+            <label>Voice model</label>
+            <input id="voice" value="en_US-lessac-medium" />
+          </div>
+        </div>
+
+        <button id="create">Create job</button>
+        <div id="createResult" class="muted"></div>
+      </div>
+
+      <div class="card">
+        <h2>Jobs</h2>
+        <button id="refresh">Refresh</button>
+        <div id="jobs"></div>
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
